@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body >
+    
+    <h1 id="title" onmouseover="resetColor()">Skillverse Computer Education</h1>
+    <button onclick="changeColor()">Click Me</button>
+    <button ondblclick="changeColor()">Double Click me</button>
+    
+    <input type="text" name="" id="textbox" onfocus="changeborder()">
+
+    <script>
+        function changeColor(){
+            let title=document.getElementById('title');
+            title.style.color="#ff4500";
+        }
+        function resetColor(){
+            let title=document.getElementById('title');
+            title.style.color="black";
+        }
+        function changeborder(){
+            let textbox=document.getElementById('textbox');
+            textbox.style.borderColor="red";
+            textbox.style.animation='easeIn';
+
+            
+        }
+    </script>
+
+</body>
+</html>

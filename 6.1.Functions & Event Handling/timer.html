@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: black;
+    }
+    .timer{
+        background-color: deepskyblue;
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ticker{
+        color: white;
+        display: flexbox;
+        font-size: 3rem;
+
+    }
+    .ticker p{
+        pointer-events: none;
+    }
+    .ticker p span::selection{
+        background-color: transparent;
+    }
+    
+    
+    </style>
+</head>
+<body>
+
+
+    
+    <div class="timer" onclick="toggle()">
+        <p class="ticker">
+            <span id="hours">0</span> :
+            <span id="mins">0</span> :
+            <span id="seconds">0</span>: 
+            <span id="ms">0</span> 
+        </p>
+    </div>
+
+
+
+    <script>
+      
+        var isTicking=false;
+
+        function tickms(){
+            var ms=parseInt(document.getElementById('ms').innerHTML);
+            if(++ms%60<10){
+                document.getElementById('ms').innerHTML="0"+ms%60;
+            }
+            else{
+                document.getElementById('ms').innerHTML=ms%60;
+            }     
+        }
+        function tick(){
+            var s=parseInt(document.getElementById('seconds').innerHTML);
+            if(++s%60<10){
+                document.getElementById('seconds').innerHTML="0"+s%60;
+            }
+            else{
+                document.getElementById('seconds').innerHTML=s%60;
+            }
+            
+            
+        }
+        function tickMins(){
+            var mins=parseInt(document.getElementById('mins').innerHTML);
+            if(++mins%60<10){
+                document.getElementById('mins').innerHTML="0"+mins%60;
+            }
+            else{
+                document.getElementById('mins').innerHTML=mins%60;
+            }
+            
+            
+        }
+
+
+
+
+        function toggle(){
+            console.log("Toggle Clicked");
+                      
+            if(!isTicking){
+                mstimer=setInterval(tickms,1);
+                stimer=setInterval(tick,1000);
+                mintimer=setInterval(tickMins,1000*60);
+                isTicking=true;
+            }
+            else{
+                clearInterval(mstimer);
+                clearInterval(stimer);
+                clearInterval(mintimer);
+                isTicking=false;
+            }
+        }
+
+        
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

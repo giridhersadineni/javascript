@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+        <script>   
+            let a=parseInt(prompt("Enter a number"));
+            let b=parseInt(prompt("Enter another number"));
+            let c=parseInt(prompt("Enter one more Please"));
+            let d=parseInt(prompt("Enter the last one"))
+            if(a>b){
+                if(a>c){
+                    if(a>d){
+                    document.getElementById('result').innerHTML="A is the Greatest Number";
+                    }
+                }
+            }
+            if(b>a){
+                if(b>c){
+                    if(b>d){
+                    document.getElementById('result').innerHTML="B is the Greatest Number";
+                    }
+                }
+            }
+            if(c>a){
+                if(c>b){
+                    if(c>d){
+                    document.getElementById('result').innerHTML="C is the Greatest Number";
+                    }
+                }
+            }
+            if(d>a){
+                if(d>b){
+                    if(d>c){
+                    document.getElementById('result').innerHTML="D is the Greatest Number";
+                    }
+                }
+            }
+            
+            
+            
+        </script>
+
+</body>
+</html>

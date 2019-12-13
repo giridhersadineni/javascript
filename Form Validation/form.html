@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="fluid-container p-1">
+  <form action="" method="POST" onsubmit="return validate()">
+    <h2>Form</h2>
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="Name" class="form-control" id="name" placeholder="Enter Name" name="Name" required minlength="3" maxlength="20" autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label for="Phone number">Phone number</label>
+        <input type="number" class="form-control" id="phoneno" placeholder="Enter Phone number" name="Phone number"  required min="1000000000" max="9999999999999999" autocomplete="tel">
+      </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"  required autocomplete="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required autocomplete="new-password">
+    </div>
+    <div class="form-group">
+        <label for="Confirm pwd">Confirm Password</label>
+        <input type="password" class="form-control" id="cnfpassword" placeholder="Enter Confirm password" name="cnfpassword" required autocomplete="new-password">
+      </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="terms" required> Accept <a href="#">Terms & Conditions</a>
+        
+      </label>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Register"></input>
+  </form>
+
+
+  <script>
+    function validate(){
+      let valid=true;
+      let name=document.getElementById('name').value;
+      let email=document.getElementById('email').value;
+      let phone=document.getElementById('phoneno').value;
+      let password=document.getElementById('password').value;
+      let cpwd=document.getElementById('cnfpassword').values;
+      if(name.length>3 && name.length<20){
+        
+      }else{
+        alert("Name should be minimum of 3 Characters length and shouldnt exceed 20 characters");
+        valid=false;
+      }
+      
+      
+
+
+
+
+      return false;
+    }
+  
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Interest Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container p-3">
+<div class="row">
+    <div class="col-md-12">
+            <div class="card p-3 bg-secondary">
+                    <h2>Simple Interest Calculator</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" >$</span>
+                                    </div>
+                                    <input type="number" class="form-control" placeholder="Princpal" id="princpal" min="1" value="0">
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                      <span class="input-group-text font-weight-bold" >Rate %</span>
+                                </div>
+                                <input type="number" class="form-control" placeholder="Rate of Interest %" id="rate">
+                        </div>
+        </div>
+                </div>
+                <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                      <span class="input-group-text" >Term in Yrs</span>
+                            </div>
+                            <input type="number" class="form-control" placeholder="Term in Years" id="term">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                              <span class="input-group-text" id="basic-addon1">Start Date</span>
+                        </div>
+                        <input type="date" class="form-control" placeholder="Select Date">
+                    </div>
+                
+                <h3 class="text-danger">Interest: <span class="badge badge-primary" id="answer">0</span></h3>
+                <p class="text-right pr-4">
+                        <button class="btn btn-info" onclick="validate()" >Calculate</button>
+                </p>
+                </div>
+    </div>
+</div>
+</div>
+    <script>
+              function calculate(){
+                var p=parseInt(document.getElementById('princpal').value);
+                var t=parseInt(document.getElementById('term').value);
+                var r=parseFloat(document.getElementById('rate').value);
+                document.getElementById('answer').innerHTML=(p*t*r/100);
+              }
+
+             function validate(){
+                     let isValid=true;
+                        var p=parseInt(document.getElementById('princpal').value);
+                        var t=parseInt(document.getElementById('term').value);
+                        var r=parseFloat(document.getElementById('rate').value);
+                        // alert(p);
+                        if(p==0 || p<0 || p==NaN){
+                                isValid=false;
+                                alert('Please Enter the Princpal')
+                        }
+                        if(t==0 || t<0 || t==NaN){
+                                isValid=false;
+                                alert('Please Enter the Term')
+                        }
+                        if(r==0 || r<0 || r==NaN){
+                                isValid=false;
+                                alert('Please Enter the Rate')
+                        }
+                        if(isValid){
+                                calculate();
+                        }
+        }
+ </script>
+</body>
+</html>
+
