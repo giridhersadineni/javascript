@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="createParagraph()">Click Me</button>
+    <script>
+        
+
+
+        function createParagraph(){
+           // document.write("<p>Hello Skillverse</p>")
+            let p=document.createElement('p');
+            p.innerHTML="Hello, I have been added dynamically using Create element method";
+            document.body.append(p);
+        }
+
+
+     
+    
+    
+    
+    
+    </script>
+</body>
+</html>

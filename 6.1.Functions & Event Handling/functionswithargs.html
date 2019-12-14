@@ -10,24 +10,21 @@
     
     <h1 id="title">Skillverse Computer Education</h1>
     
-    <button onclick="changeColor()" ondblclick="clearColor()">
+    <button onclick="changeColor('red')" >
             change color
     </button>
-    <button onclick="clearColor()">
+    <button onclick="changeColor('#ff00ff')">
             Reset color
     </button>
     
     
     
     <script>
-        function changeColor(){
+        function changeColor(color){
             let title=document.getElementById('title');
-            title.style.color="#ff4500";
+            title.style.color=color;
         }
-        function clearColor(){
-            let title=document.getElementById('title');
-            title.style.color="black";
-        }
+        
     </script>
 
 </body>
