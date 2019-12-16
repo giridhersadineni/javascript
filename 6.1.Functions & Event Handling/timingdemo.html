@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1 id="number">1</h1>
+
+<button onclick="toggle(1)">Start</button>
+<button onclick="toggle(0)">Stop</button>
+
+
+
+<script>
+    
+    function toggle(status){
+
+        if(status==1){
+            handle=setInterval(increasenumber,1000);
+           
+        }
+        if(status==0){
+            clearInterval(handle);
+        }
+    }
+
+    function increasenumber(){
+        var n=document.getElementById('number').innerHTML;
+        var num=parseInt(n);
+        num++;
+        document.getElementById('number').innerHTML=num;
+
+    }      
+    
+    
+</script>
+
+
+</body>
+</html>
