@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Slider</title>
+<style>
+    .slide{
+        display: none;
+    }
+    
+
+</style>
+</head>
+<body>
+
+
+
+
+<div class="slider">
+    <div class="slide" id="slide1" style="display: block;">
+        <img src="imgs/001.JPG" alt="">
+    </div>
+    <div class="slide" id="slide2">
+        <img src="imgs/002.JPG" alt="">
+    </div>
+    <div class="slide" id="slide3">
+        <img src="imgs/003.JPG" alt="">
+    </div>
+    <div class="slide" id="slide4">
+        <img src="imgs/004.JPG" alt="">
+    </div>
+    <div class="slide" id="slide5">
+        <img src="imgs/005.JPG" alt="">
+    </div>
+    <div class="slide" id="slide6">
+        <img src="imgs/006.JPG" alt="">
+    </div>
+    <div class="slide" id="slide7">
+        <img src="imgs/006.JPG" alt="">
+    </div>
+</div>
+
+<script>
+    var currentimage=0;
+    var slides=document.getElementsByClassName('slide');
+
+    function showNext(){
+            slides[currentimage].style.display="none";
+            currentimage++;
+            if(currentimage==slides.length){
+                currentimage=0;
+            }
+            slides[currentimage].style.display="block";
+            slides[currentimage].style.transition="ease-in";
+            console.log(slides[currentimage]);
+    }
+
+    setInterval(showNext,3000);
+</script>
+
+    
+</body>
+</html>
