@@ -10,3 +10,28 @@ Seven data types that are primitives:
 
 # Derived
 *Object
+
+
+# Let
+Declares a variable, Assigning a value to it is is optional.
+
+## Example 1
+`
+let a;
+a=10;
+console.log(a);
+`
+## Example 2
+
+`
+let a=10;
+console.log(a);
+`
+
+
+# Const
+
+
+# var
+
+
