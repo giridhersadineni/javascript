@@ -100,6 +100,7 @@ Logical operators are typically used with Boolean (logical) values; when they ar
 
 
 Logical operators
+
 |Operator	|Usage|	Description|
 |-|-|-|
 |Logical AND (&&)	| expr1 && expr2 |	Returns expr1 if it can be converted to false; otherwise, returns expr2. Thus, when used with Boolean values, && returns true if both operands are true; otherwise, returns false.|
